@@ -1,20 +1,39 @@
-body {
-  background-color: blue;
-  font-family: 'Montserrat', sans-serif;
+* {
   box-sizing: border-box;
 }
 
-.wrapper {
+body {
+  /* background: linear-gradient(180deg, rgba(31, 2, 98, 0.31) 0%, #1c0262 85.62%); */
+  font-family: 'Montserrat', sans-serif;
+  background: #621402;
+  color: #FFFFFF;
+}
+
+/* .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   vertical-align: middle;
-}
+} */
 .container {
   width: 1170px;
-  margin: 30px 0;
+  margin: auto;
 }
+
+.gradient {}
+
 .website__header {
+  background-image: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%),
+    url(../images/dune-poster_image.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  /* , */
+  min-height: 100vh;
+  padding: 30px 0;
+}
+
+.navbar {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,6 +41,7 @@ body {
   font-size: 14px;
   line-height: 16px;
 }
+
 .nav__menu {
   list-style-type: none;
   width: 425px;
@@ -30,10 +50,12 @@ body {
   justify-content: space-between;
   margin-left: 57px;
 }
+
 .menu__link {
   color: #FFFFFF;
   text-decoration: none;
 }
+
 .user {
   display: flex;
   flex-direction: row;
@@ -42,9 +64,242 @@ body {
   margin-left: auto;
   color: #FFFFFF;
 }
+
 .user__avatar {
   width: 33px;
   height: 33px;
   border-radius: 50%;
   margin-left: 12px;
+}
+
+/* movie */
+.movie {
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  margin-top: 90px;
+}
+
+.movie__director {
+  font-size: 24px;
+  line-height: 150%;
+  opacity: 0.5;
+}
+
+.movie__title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.movie__description {
+  font-size: 16px;
+  line-height: 150%;
+  max-width: 570px;
+}
+
+.movie__trailer {
+  margin: auto;
+}
+
+.movie__details {
+  display: flex;
+  align-items: center;
+  margin-top: 52px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+
+}
+
+.time__icon {
+  margin-right: 14px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-left: 34px;
+}
+
+.rating__icon {
+  margin-right: 14px;
+}
+
+.rating__current {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.session {
+  padding: 46px 0 64px;
+  margin-top: 68px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.session__label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.session__date__block {
+  display: flex;
+  align-items: center;
+}
+
+.session__date__item {
+  width: 90px;
+  height: 90px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  text-align: center;
+  margin-right: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3;
+  cursor: pointer;
+}
+
+.session__date__item:hover {
+  background: #FE8E05;
+  color: #621402;
+}
+
+.session__month {
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.session__day {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 35px;
+}
+
+.session__time {
+  font-size: 19px;
+  line-height: 22px;
+  text-transform: uppercase;
+}
+
+.cinema__select,
+.time__select {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 150%;
+  color: #FFFFFF;
+  padding: 18px;
+  cursor: pointer;
+  margin-top: 14px;
+}
+
+.cinema__select {
+  min-width: 470px;
+}
+
+.cinema__select:hover,
+.time__select:hover {
+  background: #FE8E05;
+  color: #621402;
+}
+
+.seats__scheme {
+  background: rgba(36, 36, 36, 0.18);
+  border-radius: 10px;
+}
+
+.seats__scheme path:not(.light) {
+  fill: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+}
+
+.seats__scheme path:not(.light):hover {
+  fill: rgba(255, 255, 255, 0.5);
+}
+
+.seats__scheme path.booked,
+.seats__scheme path.booked:hover {
+  fill: rgba(255, 255, 255, 0.05);
+  cursor: not-allowed;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 22px 0 38px;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.legend__label {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.legend__selected {
+  color: #FE8E05;
+}
+
+.legend__selected path.active,
+.seats__scheme path.active {
+  fill: rgba(254, 142, 5, 1);
+}
+
+.legend__selected path.active:hover,
+.seats__scheme path.active:hover {
+  fill: rgba(254, 142, 5, 0.75);
+}
+
+.legend svg {
+  margin-right: 15px;
+}
+
+.price {
+  padding: 60px 0 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price__label {
+  display: block;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 12px;
+}
+
+.total__price {
+  font-size: 52px;
+  line-height: 61px;
+}
+
+.price__button {
+  background: #FE8E05;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 24px 52px;
+  color: #FFFFFF;
+  text-decoration: none;
+  min-width: 254px;
+  text-align: center;
 }
