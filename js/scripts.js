@@ -6,6 +6,7 @@ let totalCost = 0;
 
 seatsSchemeSvg.addEventListener('click', (event) => {
   if (!event.target.classList.contains('booked')) {
+    console.log(event.target);
     event.target.classList.toggle('active');
     let totalSeats = seatsSchemeSvg.querySelectorAll('.active').length;
     totalCost = cost * totalSeats;
